@@ -14,4 +14,4 @@
                       " Maverick" ", Loner" ", Engineer"])))
 
 (defn -main []
-  (ring/run-jetty #'routes {:port 9000 :join? false}))
+  (ring/run-jetty #'routes {:port 5000 :join? false}))

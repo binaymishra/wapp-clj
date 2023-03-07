@@ -6,4 +6,9 @@
   :dependencies [[org.clojure/clojure "1.10.3"]
                  [ring/ring-jetty-adapter "1.4.0"]
                  [compojure "1.4.0"]]
-  :repl-options {:init-ns wapp-clj.core})
+  :repl-options {:init-ns wapp-clj.core}
+  :main ^:skip-aot wapp-clj.core
+  :target-path "target/%s"
+  :profiles {:uberjar {:aot :all
+                       :uberjar-name "app.jar"
+                       :jvm-opts ["-Dclojure.compiler.direct-linking=true"]}})
