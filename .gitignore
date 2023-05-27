@@ -37,4 +37,6 @@ pom.xml.asc
 /.calva/
 .lsp/
 NOTES.md
+cookies/
+/cookies/
 
