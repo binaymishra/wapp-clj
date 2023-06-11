@@ -31,11 +31,20 @@ sh run-local.sh
 
 ## Web Browser
 
-[Home](http://localhost:3000/)
+[Home http://localhost:3000/ ](http://localhost:3000/)
 
-[GET](http://localhost:3000/api)
+[GET  http://localhost:3000/api](http://localhost:3000/api)
 
-[POST](http://localhost:3000/api)
+[POST http://localhost:3000/api](http://localhost:3000/api)
+
+JSON Body for Postman
+~~~
+{
+    "message": "Hello Clojure"
+}
+~~~
+
+Or cURL command
 
 ~~~
 curl -X POST 'http://localhost:3000/api' -H 'Content-Type: application/json' --data-raw '{"message": "Hello Clojure"}'
