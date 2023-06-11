@@ -1,21 +1,48 @@
 # wapp-clj
  
 
- # Build uberjar
+## Prerequisites
 
- lein uberjar
+You will need [Leiningen][] 2.0.0 or above installed.
 
- # Run JAR
+[leiningen]: https://github.com/technomancy/leiningen
 
- java -jar target/uberjar/app.jar
+## Running
 
- http://localhost:5000/
+To start a web server for the application, run:
 
-Hello World
-reduce binay-to Maverick, Loner, Engineer
+    lein ring server
 
- # Run repl
+## License
 
- lein repl
+Copyright © 2023 Binay Mishra <binaymishramca@gmail.com>
+
+## Build uberjar
+
+~~~
+lein ring uberjar
+~~~
+
+## Run locally
+
+~~~
+sh run-local.sh
+~~~
+
+## Web Browser
+
+[Home](http://localhost:3000/)
+
+[GET](http://localhost:3000/api)
+
+[POST](http://localhost:3000/api)
+
+~~~
+curl -X POST 'http://localhost:3000/api' -H 'Content-Type: application/json' --data-raw '{"message": "Hello Clojure"}'
+~~~
+
+## TO-DO
+
+Develope APIs with database integration
 
 
