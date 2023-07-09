@@ -12,8 +12,9 @@
 				  (defroutes api-routes
     		(context "/api" []
 	      	(GET "/" request {:status 200 :headers {"content-type" "text/clojure"} :body (with-out-str (pp/pprint request))})
+	      	;; curl -v -X GET 'http://localhost:3311/api'
 	      	(POST "/" {body :body} (response/response body)) 
-	      	;; curl -X POST 'http://localhost:3000/api' -H 'Content-Type: application/json' --data-raw '{"message": "Hello Clojure"}'
+	      	;; curl -v -X POST 'http://localhost:3311/api' -H 'Content-Type: application/json' --data-raw '{"message": "Hello Clojure"}'
       ))
 		(route/resources "/")
   (route/not-found "Not Found"))
